@@ -1,0 +1,22 @@
+This file contains the project's copypastable boilerplate comment
+headers.
+
+Boilerplate for C-like languages:
+
+/**********************************************************************\
+ *           Inbound, an agnostic software building system.           *
+ *                                                                    *
+ *             Written by  Alexander Nicholi <//nich.fi/>             *
+ *   Copyright (C) 2024-2025 Aquefir Consulting LLC <//aquefir.co/>   *
+ *                    Released under BSD-2-Clause.                    *
+\**********************************************************************/
+
+Hash-based boilerplate (Python, POSIX shell, Makefile):
+
+########################################################################
+##           Inbound, an agnostic software building system.           ##
+##                                                                    ##
+##             Written by  Alexander Nicholi <//nich.fi/>             ##
+##   Copyright (C) 2024-2025 Aquefir Consulting LLC <//aquefir.co/>   ##
+##                    Released under BSD-2-Clause.                    ##
+########################################################################
