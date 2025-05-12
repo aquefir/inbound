@@ -17,11 +17,13 @@ alone, you still get the full experience. &#128519;
 ## Getting started
 
 The way we recommend getting started with Inbound is by sourcing it with
-Earthbound. Alternatively, you can vendor the two necessary sources,
-`prologue.mk` and `epilogue.mk`, from the `src/` folder in this
-repository. Once you have those two files, copy over and open for
-editing the example Makefile inside `etc/`. Adjust their `include` lines
-so the paths are valid and squadalah, you&rsquo;re off!
+Earthbound. An Earthbound INI file is provided in `etc/` to do this.
+
+Alternatively, you can vendor the two necessary sources, `prologue.mk`
+and `epilogue.mk`, from the `src/` folder in this repository. Once you
+have those two files, copy over and open for editing the example
+Makefile inside `etc/`. Adjust their `include` lines so the paths are
+valid and squadalah, you&rsquo;re off!
 
 Inbound is structured to keep your main Makefiles as normal and sensible
 as possible. When you have to change something or compensate for an edge
