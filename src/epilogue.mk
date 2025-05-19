@@ -855,6 +855,10 @@ check: $(.L_TARGETS)
 
 # Assembly
 %.s.o: %.s
+	$(call .FN_FILE,S,$@)
+	@$(AS) -o $@ $(ASFLAGS) $(.K_ASDEFINE) $(.K_ASINCLUDE) $< \
+		2>>$(INB_DEBUGLOG)
+
 %.asm.o: $.asm
 	$(call .FN_FILE,S,$@)
 	@$(AS) -o $@ $(ASFLAGS) $(.K_ASDEFINE) $(.K_ASINCLUDE) $< \
