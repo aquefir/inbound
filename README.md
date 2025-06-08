@@ -88,3 +88,15 @@ GNU/Linux is targeted with `glibc` but using `musl` with its
 While some systems are more flexible in supporting many architectures,
 a single architecture has been chosen for each system to keep complexity
 manageable.
+
+## Compiling and contributing
+
+In lieu of proper `COMPILING` and `CONTRIBUTING` documents in the
+project repository&rsquo;s root, here are some notes about the process:
+- Inbound does not&mdash;and should not&mdash;employ a build step
+	- An emplacement technique is used to update Bitbound as embedded
+	  into the Makefile sources; see `util/emplbb.py` for details
+- A test suite of _Hello, World!_ programs is being developed to ensure
+  the efficacy of Inbound; it will only use Bochs and QEMU user mode
+- Inbound is licenced under the BSD-2-Clause; see the `COPYING` document
+  for full terms
