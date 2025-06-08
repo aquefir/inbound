@@ -30,6 +30,20 @@ as possible. When you have to change something or compensate for an edge
 case, things should work all the same &ndash; Inbound won&rsquo;t get in
 your way.
 
+## Host platforms
+
+In general, Inbound is meant to only depend on an operating system that
+is compliant with POSIX.1-2001. In practise, however, this presently
+only includes GNU/Linux and Apple macOS, because those are the only
+POSIX-compliant systems that are also target platforms of Inbound.
+
+GNU/Linux and Apple macOS also have one difference between them: only
+the former supports [Bochs](https://github.com/bochs-emu/Bochs) and
+[QEMU user mode](https://www.qemu.org/docs/master/user/main.html), which
+is required for testing architectures non-natively and running any test
+suites. Apple macOS is currently required for producing Mach-O binaries,
+although this limitation may (hopefully) go away in the future.
+
 ## Target platforms
 
 Inbound should be able to facilitate building native machine code for
