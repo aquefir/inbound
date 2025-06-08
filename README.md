@@ -16,8 +16,8 @@ alone, you still get the full experience. &#128519;
 
 ## Getting started
 
-The way we recommend getting started with Inbound is by sourcing it with
-Earthbound. An Earthbound INI file is provided in `etc/` to do this.
+The way we recommend getting started with Inbound is by procuring it
+with Earthbound. An Earthbound INI is provided in `etc/` to do this.
 
 Alternatively, you can vendor the two necessary sources, `prologue.mk`
 and `epilogue.mk`, from the `src/` folder in this repository. Once you
