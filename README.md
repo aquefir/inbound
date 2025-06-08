@@ -46,10 +46,10 @@ the following architectures:
 
 Although targeting of the relevant hardware systems is the ideal, a
 virtualisation (or emulation in the case of IA-16) approach is used.
-This is only intended to work on Linux and BSD hosts. IA-16 with the
-IBM-PC is supported using [Bochs](https://github.com/bochs-emu/Bochs),
-and all other architectures are supported with semi-hosted ELF binaries
-using [QEMU user mode](https://www.qemu.org/docs/master/user/main.html).
+This is only intended to work on Linux hosts. IA-16 with the IBM-PC is
+supported using [Bochs](https://github.com/bochs-emu/Bochs) and all
+other architectures are supported with semi-hosted ELF binaries using
+[QEMU user mode](https://www.qemu.org/docs/master/user/main.html).
 
 The following systems should be targetable on the architectures shown in
 this table using Inbound:
