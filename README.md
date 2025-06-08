@@ -56,7 +56,7 @@ this table using Inbound:
 
 | System                        | Architecture     | Object code |
 |-------------------------------|------------------|:-----------:|
-| MS-DOS 6.22                   | IA-16            | none        |
+| MS-DOS 6.22                   | IA-16            | _none_      |
 | Microsoft Windows 3.11        | IA-16 with i286  | PE          |
 | Microsoft Windows 4.0         | IA-32            | PE          |
 | Microsoft Windows NT 3.1      | IA-32            | PE          |
