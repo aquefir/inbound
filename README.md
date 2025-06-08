@@ -65,7 +65,7 @@ this table using Inbound:
 | Nintendo Game Boy Advance     | ARMv4T           |
 | Nintendo DS                   | ARMv5TE + ARMv4T |
 | Nintendo 3DS                  | ARMv6K + ARMv5TE |
-| Apple macOS 10.5              | Intel 64         |
+| Apple macOS 10.4              | Intel 64         |
 | Apple macOS 11                | ARMv8.4-A        |
 
 GNU/Linux is targeted with `glibc` but using `musl` with its
