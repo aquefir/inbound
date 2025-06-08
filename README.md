@@ -54,19 +54,19 @@ other architectures are supported with semi-hosted ELF binaries using
 The following systems should be targetable on the architectures shown in
 this table using Inbound:
 
-| System                        | Architecture     |
-|-------------------------------|------------------|
-| MS-DOS 6.22                   | IA-16            |
-| Microsoft Windows 3.11        | IA-16 with i286  |
-| Microsoft Windows 4.0         | IA-32            |
-| Microsoft Windows NT 3.1      | IA-32            |
-| Microsoft Windows NT 5.2      | Intel 64         |
-| GNU/Linux with `glibc-compat` | Intel 64         |
-| Nintendo Game Boy Advance     | ARMv4T           |
-| Nintendo DS                   | ARMv5TE + ARMv4T |
-| Nintendo 3DS                  | ARMv6K + ARMv5TE |
-| Apple macOS 10.4              | Intel 64         |
-| Apple macOS 11                | ARMv8.4-A        |
+| System                        | Architecture     | Object code |
+|-------------------------------|------------------|:-----------:|
+| MS-DOS 6.22                   | IA-16            | none        |
+| Microsoft Windows 3.11        | IA-16 with i286  | PE          |
+| Microsoft Windows 4.0         | IA-32            | PE          |
+| Microsoft Windows NT 3.1      | IA-32            | PE          |
+| Microsoft Windows NT 5.2      | Intel 64         | PE          |
+| GNU/Linux with `glibc-compat` | Intel 64         | ELF         |
+| Nintendo Game Boy Advance     | ARMv4T           | ELF         |
+| Nintendo DS                   | ARMv5TE + ARMv4T | ELF         |
+| Nintendo 3DS                  | ARMv6K + ARMv5TE | ELF         |
+| Apple macOS 10.4              | Intel 64         | Mach-O      |
+| Apple macOS 11                | ARMv8.4-A        | Mach-O      |
 
 GNU/Linux is targeted with `glibc` but using `musl` with its
 `glibc-compat` interposer to ensure cross-`libc` compatibility.
