@@ -748,7 +748,7 @@ check: OBJCFLAGS := $(OBJCFLAGS.CHECK.$(TP)) $(OBJCFLAGS)
 check: LDFLAGS := $(LDFLAGS.CHECK.$(TP)) $(LDFLAGS)
 # nop out when not used, as $(REALSTRIP) is called unconditionally
 check: REALSTRIP := ':' ; # : is a no-op
-check: $(.L_TARGETS)
+check: $(.L_OFILES)
 
 ## Define recipes.
 
