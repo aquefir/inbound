@@ -867,34 +867,34 @@ check: $(.L_TARGETS)
 # C
 %.c.o: %.c
 	$(call .FN_FILE,C,$@)
-	@$(CC) -c -o $@ $(CFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
+	@$(CC) -o $@ $(CFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
 		2>>$(INB_DEBUGLOG)
 
 # C++
 %.cpp.o: %.cpp
 	$(call .FN_FILE,CXX,$@)
-	@$(CXX) -c -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
+	@$(CXX) -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
 		2>>$(INB_DEBUGLOG)
 
 %.cc.o: %.cc
 	$(call .FN_FILE,CXX,$@)
-	@$(CXX) -c -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
+	@$(CXX) -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
 		2>>$(INB_DEBUGLOG)
 
 %.cxx.o: %.cxx
 	$(call .FN_FILE,CXX,$@)
-	@$(CXX) -c -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
+	@$(CXX) -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
 		2>>$(INB_DEBUGLOG)
 
 %.c++.o: $.c++
 	$(call .FN_FILE,CXX,$@)
-	@$(CXX) -c -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
+	@$(CXX) -o $@ $(CXXFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
 		2>>$(INB_DEBUGLOG)
 
 # Objective-C
 %.m.o: %.m
 	$(call .FN_FILE,OBJC,$@)
-	@$(CC) -c -o $@ $(OBJCFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
+	@$(CC) -o $@ $(OBJCFLAGS) $(.K_DEFINE) $(.K_INCLUDE) $< \
 		2>>$(INB_DEBUGLOG)
 
 # Static library recipe.
