@@ -54,21 +54,21 @@ k_preproc = re.compile(r'^#((include)[ \t\v\f]+(["<][A-Za-z_0-9/\\\.]' +
 	r'0-9_, \t\v\f]+\))?([ \t\v\f]+(.+$))?|([a-z]+)([ \t\v\f]+(.+' +
 	r'$))?)', re.MULTILINE)
 
-def print2(s: str):
+def print2(s: str) -> str:
 	from sys import stderr
 	stderr.buffer.write(s.encode('utf-8'))
 	stderr.buffer.flush()
 
-def read2(n: int | None = None):
+def read2(n: int | None = None) -> str:
 	from sys import stdin
 	b = stdin.buffer.read() if n is None else stdin.buffer.read(n)
 	return b.decode('utf-8')
 
-def write2(s: str):
+def write2(s: str) -> None:
 	from sys import stdout
 	stdout.buffer.write(s.encode('utf-8'))
 
-def replace_operator(s: str, key: str):
+def replace_operator(s: str, key: str) -> str:
 	return k_operators[key].sub(key, s)
 
 def convert_line(lines, lines_sz, ret, i) -> str:
