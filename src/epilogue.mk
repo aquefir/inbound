@@ -712,14 +712,19 @@ endif
 
 ## Define the target recipes.
 
-.PHONY: debug release check schema clean format
+.PHONY: debug release check clean format
+ifneq ($(strip $(.K_GE_4_4)),)
+.PHONY: schema
+endif
 # Remove all default implicit rules by emptying the suffixes builtin
 # This causes false circular dependencies with multi-dotted file
 # extensions if we don't do this
 .SUFFIXES:
 
+ifneq ($(strip $(.K_GE_4_4)),)
 # schema generation uses stdio so it can't be parallelised easily
 .NOTPARALLEL: schema
+endif
 
 ## Debug build
 ## useful for: normal testing, valgrind, LLDB
@@ -993,6 +998,7 @@ endif
 
 # Generate compile_commands.json for clangd.
 
+ifneq ($(strip $(.K_GE_4_4)),)
 schema-start:
 	@$(ECHO) -n '[' > compile_commands.json
 
@@ -1001,6 +1007,7 @@ schema: schema-start $(SCHFILES) schema-end
 schema-end:
 	@truncate -s-1 compile_commands.json
 	@$(ECHO) -n ']' >> compile_commands.json
+endif
 
 # Clean the repository.
 

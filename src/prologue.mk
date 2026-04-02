@@ -23,16 +23,29 @@
 ## For more information, visit <//kb.xion.mt/Inbound>.
 ##
 
-# Check Make version; we need at least GNU Make 3.82. Fortunately,
-# 'undefine' directive has been introduced exactly in GNU Make 3.82.
+# Exhaustive version check. Since the addition of the schema .PHONY
+# target, Inbound requires GNU Make v4.4 or later, but will otherwise
+# work with v3.82 or later (with warning).
+# Checking for v3.82 is a bit more primitive yet fool-proof as it scans
+# the .FEATURES variable; checking for v4.4 requires parsing the builtin
+# with some coreutils shell commands.
 ifeq ($(filter undefine,$(value .FEATURES)),)
 ifneq ($(strip $(MAKE_VERSION)),)
 $(error Unsupported GNU Make version. \
 The build system does not work properly with GNU Make $(MAKE_VERSION). \
-Please use GNU Make 3.82 or later)
+Please use GNU Make 4.4 or later)
 else
 $(error Unsupported Make utility. \
-Please use GNU Make 3.82 or later)
+Please use GNU Make 4.4 or later)
+endif
+else
+.K_MAJOR := $(shell /bin/echo $(MAKE_VERSION) | cut -f1 -d.)
+.K_MINOR := $(shell /bin/echo $(MAKE_VERSION) | cut -f2 -d.)
+.K_GE_4_4 := $(shell test $(.K_MAJOR) -gt 4 -o \( $(.K_MAJOR) -eq 4 -a $(.K_MINOR) -ge 4 \) && echo 1)
+ifeq ($(strip $(.K_GE_4_4)),)
+$(warning Partially supported GNU Make version. \
+The build system cannot correctly emit clangd LSP schemas before v4.4. \
+That .PHONY target will be disabled. All else should work as expected.)
 endif
 endif
 
