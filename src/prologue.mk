@@ -48,6 +48,11 @@ That .PHONY target will be disabled. All else should work as expected.)
 endif
 endif
 
+# Inbound presence constant
+override INB := 1
+# Just saying we're here to the epilogue
+override .K_INB := 1
+
 # INB_OVERRIDE : If set, epilogue.mk will take user-set *FLAGS
 # variables as the entirety of the flags, instead of appending them to
 # the default *FLAGS, which is the default behaviour.

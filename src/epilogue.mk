@@ -27,6 +27,12 @@
 # compilation. The default is simply "debug.log" in the current working
 # directory, but this can be changed using this variable.
 
+ifeq ($(strip $(.K_INB)),)
+$(error This epilogue needs the prologue to be included in the parent \
+Makefile first. Please include it at the top of the Makefile and make \
+sure this file is included at the bottom.)
+endif
+
 # Inspect the origin of the new variable.
 # If it is undefined or set by default, say so. Otherwise it was
 # customised. The ".O_" prefix denotes "origin" and is to prevent
