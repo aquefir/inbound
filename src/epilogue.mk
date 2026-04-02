@@ -1,5 +1,4 @@
 #!/usr/bin/make
-# -*- coding: utf-8 -*-
 ##
 ## INBOUND, an agnostic software building system
 ##
