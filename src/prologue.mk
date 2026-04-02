@@ -3,7 +3,7 @@
 ## INBOUND, an agnostic software building system
 ##
 ## Written by Alexander Nicholi <//nich.fi/>
-## Copyright (C) 2024-2025 Aquefir Consulting LLC <//aquefir.co/>
+## Copyright (C) 2024-2026 Aquefir Consulting LLC <//aquefir.co/>
 ## Released under BSD-2-Clause.
 ##
 ## Prologue file, to be included at the beginning of your Makefile
