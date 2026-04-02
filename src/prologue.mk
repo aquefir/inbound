@@ -1170,6 +1170,85 @@ OBJCFLAGS.CHECK.WIN95    := -E -Wextra -Werror -Wno-unused-variable
 OBJCFLAGS.CHECK.WINNT32  := -E -Wextra -Werror -Wno-unused-variable
 OBJCFLAGS.CHECK.WINNT64  := -E -Wextra -Werror -Wno-unused-variable
 
+# Objective-C++ compiler flags.
+# Form: OBJCXXFLAGS.<RECIPE>.<TP>
+
+.K_OBJCXXFLAGS_W := -Wpedantic -Wno-long-long
+
+OBJCXXFLAGS.ANY.AGBHB    := -ansi -frandom-seed=69420 -march=armv4t \
+	-mcpu=arm7tdmi -mthumb-interwork -pipe $(.K_OBJCXXFLAGS_W) \
+	-x objective-c++
+OBJCXXFLAGS.ANY.AGBSP    := -ansi -ffreestanding -fno-pie -fPIC \
+	-frandom-seed=69420 -march=armv4t -mcpu=arm7tdmi -nostdinc \
+	-pipe $(.K_OBJCXXFLAGS_W) -x objective-c++
+OBJCXXFLAGS.ANY.DARWIN86 := -ansi -fPIC -frandom-seed=69420 \
+	-march=x86-64 -mtune=k8 -pipe $(.K_OBJCXXFLAGS_W) -x \
+	objective-c++
+OBJCXXFLAGS.ANY.DARWINM1 := -ansi -fPIC -frandom-seed=69420 \
+	-march=armv8.4-a -mcpu=apple-m1 -pipe $(.K_OBJCXXFLAGS_W) \
+	-x objective-c++
+OBJCXXFLAGS.ANY.FREEBSD  := -ansi -fPIC -frandom-seed=69420 \
+	-march=x86-64 -mtune=k8 -pipe $(.K_OBJCXXFLAGS_W) -x \
+	objective-c++
+OBJCXXFLAGS.ANY.ILLUMOS  := -ansi -fPIC -frandom-seed=69420 -mcpu=v9 \
+	-mtune=niagara -pipe $(.K_OBJCXXFLAGS_W) -x objective-c++
+OBJCXXFLAGS.ANY.LINUX32  := -ansi -fPIC -frandom-seed=69420 \
+	-march=i686 -mtune=k8 -pipe $(.K_OBJCXXFLAGS_W) -x objective-c++
+OBJCXXFLAGS.ANY.LINUX64  := -ansi -fPIC -frandom-seed=69420 \
+	-march=x86-64 -mtune=k8 -pipe $(.K_OBJCXXFLAGS_W) -x \
+	objective-c++
+OBJCXXFLAGS.ANY.OPENBSD  := -ansi -fPIC -frandom-seed=69420 \
+	-march=x86-64 -mtune=k8 -pipe $(.K_OBJCXXFLAGS_W) -x \
+	objective-c++
+OBJCXXFLAGS.ANY.WIN95    := -ansi -fPIC -frandom-seed=69420 \
+	-march=i386 -mtune=i486 -pipe $(.K_OBJCXXFLAGS_W) -x \
+	objective-c++
+OBJCXXFLAGS.ANY.WINNT32  := -ansi -fPIC -frandom-seed=69420 \
+	-march=i386 -mtune=i686 -pipe $(.K_OBJCXXFLAGS_W) -x \
+	objective-c++
+OBJCXXFLAGS.ANY.WINNT64  := -ansi -fPIC -frandom-seed=69420 \
+	-march=x86-64 -mtune=k8 -pipe $(.K_OBJCXXFLAGS_W) -x \
+	objective-c++
+
+OBJCXXFLAGS.DEBUG.AGBHB    := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.AGBSP    := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.DARWIN86 := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.DARWINM1 := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.FREEBSD  := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.ILLUMOS  := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.LINUX32  := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.LINUX64  := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.OPENBSD  := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.WIN95    := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.WINNT32  := -c -O0 -g3 -Wall
+OBJCXXFLAGS.DEBUG.WINNT64  := -c -O0 -g3 -Wall
+
+OBJCXXFLAGS.RELEASE.AGBHB    := -c -O3 -w
+OBJCXXFLAGS.RELEASE.AGBSP    := -c -O3 -w
+OBJCXXFLAGS.RELEASE.DARWIN86 := -c -O3 -w
+OBJCXXFLAGS.RELEASE.DARWINM1 := -c -O3 -w
+OBJCXXFLAGS.RELEASE.FREEBSD  := -c -O3 -w
+OBJCXXFLAGS.RELEASE.ILLUMOS  := -c -O3 -w
+OBJCXXFLAGS.RELEASE.LINUX32  := -c -O3 -w
+OBJCXXFLAGS.RELEASE.LINUX64  := -c -O3 -w
+OBJCXXFLAGS.RELEASE.OPENBSD  := -c -O3 -w
+OBJCXXFLAGS.RELEASE.WIN95    := -c -O3 -w
+OBJCXXFLAGS.RELEASE.WINNT32  := -c -O3 -w
+OBJCXXFLAGS.RELEASE.WINNT64  := -c -O3 -w
+
+OBJCXXFLAGS.CHECK.AGBHB    := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.AGBSP    := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.DARWIN86 := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.DARWINM1 := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.FREEBSD  := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.ILLUMOS  := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.LINUX32  := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.LINUX64  := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.OPENBSD  := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.WIN95    := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.WINNT32  := -E -Wextra -Werror -Wno-unused-variable
+OBJCXXFLAGS.CHECK.WINNT64  := -E -Wextra -Werror -Wno-unused-variable
+
 # Archiver flags.
 # Form: ARFLAGS.<RECIPE>.<TP>
 
